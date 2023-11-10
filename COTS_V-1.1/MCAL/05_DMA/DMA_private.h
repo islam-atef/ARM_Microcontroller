@@ -1,11 +1,6 @@
 #ifndef		DMA_PRIVATE_H
 #define		DMA_PRIVATE_H
-
 /***********************************************************************/
-
-#define		DMA1_BASE_ADD			(u32)(0x40026000)
-#define		DMA2_BASE_ADD			(u32)(0x40026400)
-
 /*                      The Register For Each Stream                   */
 typedef struct
 {
@@ -26,9 +21,5 @@ typedef struct
     volatile      u32               HIFCR       ;
     volatile      MDMA_STREAM_TYPE  S[8]        ;
 }MDMA_TYPE ;
-
-#define DMA1  (MDMA_TYPE * )DMA1_BASE_ADD
-#define DMA2  (MDMA_TYPE * )DMA2_BASE_ADD
-
 /***********************************************************************/
 #endif
